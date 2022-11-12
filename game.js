@@ -3,14 +3,6 @@ const wt = [-4, -3, -2, -1, 1, 2, 3, 4];
 
 Math.clamp = (v, min, max) => v < min ? min : (v > max ? max : v);
 
-Number.prototype.floor = function() {
-    return ~~this + this < 0;
-}
-
-Array.prototype.randomChoice = function() {
-    return this[~~(this.length * Math.random())];
-}
-
 Object.defineProperty(Array.prototype, "minBy", {
     writable: true,
     value: function (callablefn) {
